@@ -10,9 +10,16 @@ copy .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan db:seed
-npm i && npm run dev
-php artisan serve
+npm i
+
 ```
+
+## Run Server dev and hot reload
+
+    ```bash
+    npm run dev
+    php artisan serve
+    ```
 
 ## Run Pint
 
