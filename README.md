@@ -39,3 +39,8 @@ php artisan serve
 Sidebar links resources/js/Components/Sidebar/SidebarContent.vue
 ```
 
+#### Screens
+
+|                                     |                                    |
+| ----------------------------------- | ---------------------------------- |
+| ![Shocase 1](screens/l1.png)   | ![Shocase 2](screens/l2.png)   |
