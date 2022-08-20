@@ -16,26 +16,26 @@ npm i
 
 ## Run Server dev and hot reload
 
-    ```bash
-    npm run dev
-    php artisan serve
-    ```
+```bash
+npm run dev
+php artisan serve
+```
 
 ## Run Pint
 
-    ```bash
-    ./vendor/bin/pint --test -v 
-    ```
+```bash
+./vendor/bin/pint --test -v 
+```
 
 ## Run and fix Pint
 
-    ```bash
-    ./vendor/bin/pint
-    ```
+```bash
+./vendor/bin/pint
+```
 
 ## Sidebar jetstream panel power by kamona/kui-laravel-jetstream
 
-    ```bash
-    Sidebar links resources/js/Components/Sidebar/SidebarContent.vue
-    ```
+```bash
+Sidebar links resources/js/Components/Sidebar/SidebarContent.vue
+```
 
