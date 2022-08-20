@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Team;
-
+use App\Models\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -20,12 +20,32 @@ class DatabaseSeeder extends Seeder
         $this->call([PermissionSeeder::class]);
 
 
-        $user = \App\Models\User::factory()->create([
+
+        // $user = \App\Models\User::factory([
+        //     'name' => 'Master user',
+        //     'email' => 'paulpwo™gmail.com',
+        //     'password' => bcrypt('dragon123'),
+        // ])->create();
+        // $team = Team::create(
+        //     [
+        //         'name' => 'Master Team',
+        //         'user_id' => $user->id,
+        //         'personal_team' => true,
+        //     ]
+        // );
+        // $user->assignRole('SuperAdmin');
+
+
+        $user  = User::factory([
             'name' => 'Master user',
-            'email' => 'paulpwo™gmail.com',
-            'password' => bcrypt('dragon123'),
-        ])->withPersonalTeam()
-            ->hasAttached(Team::factory()->count(1))
+            'email' => 'paulpwo@gmail.com',
+            'password' => bcrypt('dragon123')
+        ])
+        ->withPersonalTeam()
+        ->hasAttached(Team::factory()->create([
+            'name' => 'Master Team',
+            'personal_team' => false,
+            ]))
             ->create();
         $user->assignRole('SuperAdmin');
 
