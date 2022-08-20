@@ -36,7 +36,7 @@ Route::middleware([
 
 Route::get('/privacy', function () {
     return Inertia::render('PrivacyPolicy', [
-        'policy' =>'privacy',
+        'policy' => 'privacy',
     ]);
 });
 
